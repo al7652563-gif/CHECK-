@@ -4,15 +4,9 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Story Page 1</title>
-<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
-<script>
-  window.googletag = window.googletag || {cmd: []};
-  googletag.cmd.push(function() {
-    googletag.defineSlot('/23313830399/g', [320, 100], 'div-gpt-ad-1783224307364-0').addService(googletag.pubads());
-    googletag.defineSlot('/23313830399/300x250', [300, 250], 'div-gpt-ad-1783224495158-0').addService(googletag.pubads());
-    googletag.enableServices();
-  });
-</script>
+<link rel="preconnect" href="https://snapplanets.org">
+<link rel="preconnect" href="https://securepubads.g.doubleclick.net">
+<link rel="preload" as="image" href="https://snapplanets.org/wp-content/uploads/2026/07/Snapshot_5.png" fetchpriority="high">
 <style>
 *{box-sizing:border-box}
 body{margin:0;background:#000;font-family:Arial,sans-serif}
@@ -26,9 +20,10 @@ video{width:100%;height:300px;object-fit:cover;border-radius:12px;display:block}
 .next{position:absolute;right:10px;top:50%;transform:translateY(-50%);background:#007bff;color:#fff;text-decoration:none;padding:12px 18px;border-radius:8px;font-weight:bold;z-index:10}
 .end-message{display:none;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,.85);color:#fff;padding:10px 20px;border-radius:8px;font-weight:bold}
 .story{background:#111;color:#fff;padding:15px;border-radius:12px;line-height:1.6;margin-top:12px;border-left:4px solid #ff0000;font-size:16px;opacity:0;transform:translateY(12px);animation:storyIn .6s ease forwards .3s}
-.story-label{display:inline-flex;align-items:center;gap:6px;background:#ff0000;color:#fff;font-weight:bold;font-size:12px;letter-spacing:.5px;padding:4px 10px;border-radius:20px;margin-bottom:10px;text-transform:uppercase;animation:pulse 1.4s ease-in-out infinite}
+.story-label{display:inline-flex;align-items:center;gap:6px;background:#ff0000;color:#fff;font-weight:bold;font-size:12px;letter-spacing:.5px;padding:4px 10px;border-radius:20px;margin-bottom:10px;text-transform:uppercase;position:relative}
+.story-label:before{content:'';position:absolute;inset:0;border-radius:20px;background:#ff0000;animation:pulse 1.4s ease-in-out infinite;will-change:transform,opacity}
 @keyframes storyIn{to{opacity:1;transform:translateY(0)}}
-@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(255,0,0,.5)}50%{box-shadow:0 0 0 6px rgba(255,0,0,0)}}
+@keyframes pulse{0%{transform:scale(1);opacity:.6}70%{transform:scale(1.5);opacity:0}100%{transform:scale(1.5);opacity:0}}
 .part3-badge{display:inline-block;background:#ff0000;color:#fff;font-weight:bold;font-size:12px;padding:2px 8px;border-radius:6px;}
 @media(max-width:480px){video{height:250px}}
 
@@ -55,16 +50,12 @@ z-index:10;
 
 <div class="wrapper">
 <div class="ad-top"><!-- /23313830399/g -->
-<div id='div-gpt-ad-1783224307364-0' style='min-width: 320px; min-height: 100px;'>
-  <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1783224307364-0'); });
-  </script>
-</div>
+<div id='div-gpt-ad-1783224307364-0' style='min-width: 320px; min-height: 100px;'></div>
 </div>
 </div></div>
 
 <div class="image-box"><div class="part-badge">PART 1</div>
-<img id="videoPoster" src="https://snapplanets.org/wp-content/uploads/2026/07/Snapshot_5.png"><div id="loadingOverlay">Preparing Video...</div><video id="mainVideo" playsinline muted autoplay preload="metadata">
+<img id="videoPoster" src="https://snapplanets.org/wp-content/uploads/2026/07/Snapshot_5.png" fetchpriority="high"><div id="loadingOverlay">Preparing Video...</div><video id="mainVideo" playsinline muted autoplay preload="metadata">
 <source src="https://snapplanets.org/wp-content/uploads/2026/07/new-text-2.mp4" type="video/mp4">
 </video><button id="unmuteBtn">🔊 Tap to Unmute</button>
 
@@ -75,15 +66,11 @@ z-index:10;
 </div>
 
 <div class="story">
-<span class="story-label">⚠️ Alert</span> Main video starts from <span class="part3-badge">PART 3</span>
+<span class="story-label">⚠️ Alert</span> Main video starts from <span class="part3-badge">PART 3</span> — right story hear
 </div>
 
 <div class="ad-bottom"><!-- /23313830399/300x250 -->
-<div id='div-gpt-ad-1783224495158-0' style='min-width: 300px; min-height: 250px;'>
-  <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1783224495158-0'); });
-  </script>
-</div>
+<div id='div-gpt-ad-1783224495158-0' style='min-width: 300px; min-height: 250px;'></div>
 </div>
 
 <script>
@@ -93,5 +80,23 @@ video.addEventListener('ended',()=>msg.style.display='block');
 video.addEventListener('play',()=>msg.style.display='none');
 </script>
 <script>window.addEventListener('DOMContentLoaded',()=>{const video=document.getElementById('mainVideo');const poster=document.getElementById('videoPoster');const loader=document.getElementById('loadingOverlay');const btn=document.getElementById('unmuteBtn');video.muted=true;video.play().catch(()=>{});function r(){setTimeout(()=>{loader.style.display='none';poster.style.opacity='0';poster.style.transition='opacity .25s';setTimeout(()=>poster.remove(),250);btn.style.display='block';},250)}video.addEventListener('playing',r,{once:true});video.addEventListener('timeupdate',()=>{if(video.currentTime>0.05)r();},{once:true});btn.onclick=()=>{video.muted=false;btn.style.display='none';};});</script>
+<script>
+setTimeout(function(){
+  var s=document.createElement('script');
+  s.async=true;
+  s.src='https://securepubads.g.doubleclick.net/tag/js/gpt.js';
+  s.crossOrigin='anonymous';
+  document.head.appendChild(s);
+
+  window.googletag=window.googletag||{cmd:[]};
+  googletag.cmd.push(function(){
+    googletag.defineSlot('/23313830399/g',[320,100],'div-gpt-ad-1783224307364-0').addService(googletag.pubads());
+    googletag.defineSlot('/23313830399/300x250',[300,250],'div-gpt-ad-1783224495158-0').addService(googletag.pubads());
+    googletag.enableServices();
+    googletag.display('div-gpt-ad-1783224307364-0');
+    googletag.display('div-gpt-ad-1783224495158-0');
+  });
+},1000);
+</script>
 </body>
 </html>
