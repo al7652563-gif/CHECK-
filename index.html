@@ -91,11 +91,16 @@ setTimeout(function(){
   window.googletag=window.googletag||{cmd:[]};
   googletag.cmd.push(function(){
     googletag.defineSlot('/23313830399/g',[320,100],'div-gpt-ad-1783224307364-0').addService(googletag.pubads());
-    googletag.defineSlot('/23313830399/300x250',[300,250],'div-gpt-ad-1783224495158-0').addService(googletag.pubads());
     googletag.enableServices();
     googletag.display('div-gpt-ad-1783224307364-0');
-    googletag.display('div-gpt-ad-1783224495158-0');
   });
+
+  setTimeout(function(){
+    googletag.cmd.push(function(){
+      googletag.defineSlot('/23313830399/300x250',[300,250],'div-gpt-ad-1783224495158-0').addService(googletag.pubads());
+      googletag.display('div-gpt-ad-1783224495158-0');
+    });
+  },500);
 },1000);
 </script>
 </body>
